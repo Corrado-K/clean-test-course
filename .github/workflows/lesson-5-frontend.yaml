@@ -5,6 +5,16 @@ on:
     branches:
       - lesson-5
 jobs:
+  security_test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    name: Execute the PyCharm Security test.
+    steps:
+      - uses: actions/checkout@v4
+      - name: ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.15.0
 #  function_test: (commented out to save learner time)
 #    runs-on: ubuntu-latest
 #    defaults:
