@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
         working-directory: frontend
-    name: Execute the PyCharm Security test.
+    name: Execute the ZAP baseline scan.
     steps:
       - uses: actions/checkout@v4
       - name: ZAP Baseline Scan
